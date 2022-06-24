@@ -20,7 +20,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         Image image = new Image(getClass().getResourceAsStream("/icons/icon-contact.png"));
         scene = new Scene(loadFXML("primary"), 640, 480);
-        scene.getStylesheets().add("/styles/styles.css");
+        scene.getStylesheets().add(getClass().getResource("/styles/styles.css").toExternalForm());
         
         stage.getIcons().add(image);
         stage.setTitle("Agenda de Contatos");
@@ -40,5 +40,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }

@@ -1,10 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Button?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carl.controller.PrimaryController">
-   
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="carl.controller.PrimaryController">
+  <children>
+    <AnchorPane prefHeight="709.0" prefWidth="574.0">
+      <children>
+        <HBox alignment="CENTER" minHeight="51.0" prefHeight="69.0" prefWidth="641.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+          <children>
+            <ImageView fitHeight="56.10641670186566" fitWidth="131.69422912597656" pickOnBounds="true" preserveRatio="true">
+              <image>
+                <Image url="@../image/CjsEAD.png" />
+              </image>
+              <HBox.margin>
+                <Insets />
+              </HBox.margin>
+            </ImageView>
+          </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="56.1064453125" prefWidth="574.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+          <children>
+            <MenuBar fx:id="barraDeMenu" prefWidth="265.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Arquivo" fx:id="menuArquivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarContato" text="Contato" fx:id="menuItemContato">
+                      <accelerator>
+                        <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator>
+                    </MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarTipoContato" text="Tipo de Contato" fx:id="menuItemTipoContato">
+                      <accelerator>
+                        <KeyCodeCombination alt="UP" code="T" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator>
+                    </MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarCidade" text="Cidade" fx:id="menuItemCidade">
+                      <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator>
+                    </MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarUsuario" text="Usuario" fx:id="menuItemUsuario">
+                      <accelerator>
+                        <KeyCodeCombination alt="UP" code="U" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator>
+                    </MenuItem>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarSair" text="Sair" fx:id="menuItemSair">
+                      <accelerator>
+                        <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                      </accelerator>
+                    </MenuItem>
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Relatorios" fx:id="menuRelatorio">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarRelatorioContatoGeral" text="Contatos Geral" fx:id="menuItemRelatorioContatoGeral" />
+                    <MenuItem mnemonicParsing="false" onAction="#acessarRelatorioContatoEndereco" text="Contatos Endereços" fx:id="menuItemRelatorioContatoEndereco" />
+                    <MenuItem mnemonicParsing="false" onAction="#acessarRelatorioContatoTelefone" text="Contatos Telefone" fx:id="menuItemRelatorioContatoTelefone" />
+                    <MenuItem mnemonicParsing="false" onAction="#acessarRelatorioContatoTipo" text="Contatos Tipos" fx:id="menuItemRelatorioContatoTipo" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Sobre" fx:id="menuSobre">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#acessarRelatorioSobreSistema" text="Sistema" fx:id="menuItemSistema" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+          </children>
+        </HBox>
+      </children>
+    </AnchorPane>
+  </children>
 </VBox>
