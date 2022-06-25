@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="441.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #00b6b6;&#10;-fx-border-color: #000000" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Label text="Titulo">
+          <font>
+            <Font name="System Bold" size="24.0" />
+          </font>
+        </Label>
+      </children>
+    </HBox>
+    <AnchorPane prefHeight="120.0" prefWidth="600.0" style="-fx-background-color: #ffffff;&#10;-fx-border-color: #000000&#10;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <children>
+        <TextField fx:id="tfId" disable="true" editable="false" layoutY="24.0" prefHeight="22.0" prefWidth="200.0" promptText="id" AnchorPane.leftAnchor="20.0" />
+        <TextField fx:id="tfDescricao" layoutY="71.0" prefWidth="200.0" promptText="Descriçao" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      </children>
+    </AnchorPane>
+    <AnchorPane prefHeight="305.0" prefWidth="600.0" style="-fx-background-color: #00b6b6;&#10;-fx-border-color: #000000" AnchorPane.bottomAnchor="-34.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="170.0">
+      <children>
+        <HBox alignment="CENTER" prefHeight="59.0" prefWidth="592.0" style="-fx-background-color: #eeeeeb" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="4.0">
+          <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#incluirRegistro" prefHeight="46.0" prefWidth="94.0" text="Novo">
+              <font>
+                <Font name="System Bold Italic" size="12.0" fx:id="x1" />
+              </font>
+              <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../icons/add-icon-2.jpg" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+            <Button fx:id="btnSalvar" font="$x1" mnemonicParsing="false" onAction="#salvarregistro" prefHeight="46.0" prefWidth="94.0" text="Salvar">
+              <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../icons/save-icon.png" />
+                  </image>
+                </ImageView>
+              </graphic>
+              <HBox.margin>
+                <Insets left="10.0" fx:id="x2" />
+              </HBox.margin>
+            </Button>
+            <Button fx:id="btnExluir" font="$x1" mnemonicParsing="false" onAction="#excluirRegistro" prefHeight="46.0" prefWidth="94.0" text="Excluir" HBox.margin="$x2">
+              <graphic>
+                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                    <Image url="@../icons/delete-icon.jpg" />
+                  </image>
+                </ImageView>
+              </graphic>
+            </Button>
+          </children>
+        </HBox>
+        <TextField fx:id="tfPesquisa" onAction="#pesquisar" prefWidth="200.0" style="-fx-background-radius: 20px" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0" />
+        <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="99.0" />
+      </children>
+    </AnchorPane>
+  </children>
+</AnchorPane>
